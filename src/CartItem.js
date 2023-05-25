@@ -5,7 +5,7 @@ class CartItem extends React.Component{
     constructor () {
         super();
         this.state = {
-            title: 'Phone',
+            title: 'Smart Phone',
             price: 999,
             qty: 3,
             img: ''
@@ -13,7 +13,24 @@ class CartItem extends React.Component{
         // this.increaseQuantity = this.increaseQuantity.bind(this);
     }
     increaseQuantity = ()=>{
-        console.log('this', this.state);
+        // console.log('this', this.state);
+        // stateForm 1
+        // this.setState({
+        //     qty: this.state.qty + 1
+        // });
+        // stateForm 2
+        this.setState((prevState)=>{
+            return{
+                qty: prevState.qty + 1
+            }
+        });
+    }
+    decreaseQuantity = ()=>{
+        if(this.state.qty > 0){
+            this.setState({
+                qty: this.state.qty - 1
+            });
+        }
     }
     render(){
         const {title, price, qty} = this.state;
@@ -29,7 +46,7 @@ class CartItem extends React.Component{
                     <div className="cart-item-actions">
                         {/* buttons */}
                         <i className="fa-solid fa-circle-plus action-icons" onClick={this.increaseQuantity}></i>
-                        <i className="fa-solid fa-circle-minus action-icons"></i>
+                        <i className="fa-solid fa-circle-minus action-icons" onClick={this.decreaseQuantity}></i>
                         <i className="fa-solid fa-trash-can action-icons"></i>
                     </div>
                 </div>
