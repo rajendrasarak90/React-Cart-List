@@ -8,13 +8,15 @@ body {
 
 .cart-item{
   display: flex;
-
+  margin: 10px;
+  padding-top: 7px;
+  border-top: 1px solid black;
 }
 .cart-item .right-block{
   padding: 0 20px;
 }
 .cart-item-actions{
-  margin-top: 20px;
+  margin-top: 7px;
 }
 .action-icons{
   height: 25px;
