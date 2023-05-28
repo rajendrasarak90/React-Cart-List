@@ -5,8 +5,8 @@ const Navbar = (props)=>{
         <div style={styles.nav}>
             <h1 style={styles.titleHead}>CartList</h1>
             <div style={styles.cartIconContainer}>
-                 <i style={styles.cartItem} class="fa-solid fa-cart-shopping"></i>
-                <span style={styles.cartCount}>3</span>
+                 <i style={styles.cartItem} className="fa-solid fa-cart-shopping"></i>
+                <span style={styles.cartCount}>{props.count}</span>
             </div>
         </div>
     );
@@ -33,7 +33,8 @@ const styles = {
         alignItems: 'center'
     },
     cartIconContainer:{
-        position: 'relative'
+        position: 'relative',
+        right: '10px'
     },
     cartCount:{
         background: 'yellow',

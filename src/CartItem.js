@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const CartItem = (props)=>{
     
     const {title, price, qty, img} = props.product;
