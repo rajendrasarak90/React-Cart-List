@@ -2,12 +2,13 @@
 
 This is simple cart list mini project built using react to maintain a cart list.
 
-In the project directory, you can run:
+## In the project directory, you can run:
 
-### `npm start`
+### 1 `npm install`
+Install all the dependencies.
+### 2 `npm start`
+Start the react application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Hosted URL
+https://cart-list-react.onrender.com/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
