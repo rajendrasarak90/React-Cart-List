@@ -3,7 +3,7 @@ import CartItem from './CartItem';
 
 const Cart = (props) => {
     
-    const {products, onIncreaseQuantity, onDecreaseQuantity, onDeleteQuantity, totalPrice} = props;
+    const {products, onIncreaseQuantity, onDecreaseQuantity, onDeleteQuantity} = props;
     return(
         <div className="cart">
             <h2>Your Cart</h2>
@@ -17,18 +17,10 @@ const Cart = (props) => {
                 onDeleteQuantity = {onDeleteQuantity}/>
             })}
             
-            <p style={styles.totalPrice}>Total Price = {totalPrice}</p>
-            
         </div>
     );
 }
 
-const styles = {
-    totalPrice:{
-        fontSize: '1.3rem',
-        fontWeight: 500,
-        padding: '10px'
-    }
-}
+
 
 export default Cart;

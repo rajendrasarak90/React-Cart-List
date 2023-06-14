@@ -1,0 +1,132 @@
+[debug] [2023-06-14T07:27:14.046Z] ----------------------------------------------------------------------
+[debug] [2023-06-14T07:27:14.048Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-14T07:27:14.049Z] CLI Version:   12.2.1
+[debug] [2023-06-14T07:27:14.049Z] Platform:      win32
+[debug] [2023-06-14T07:27:14.050Z] Node Version:  v18.15.0
+[debug] [2023-06-14T07:27:14.051Z] Time:          Wed Jun 14 2023 12:57:14 GMT+0530 (India Standard Time)
+[debug] [2023-06-14T07:27:14.051Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-14T07:27:14.183Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-14T07:27:14.184Z] > authorizing via signed-in user (rajendrasarak622@gmail.com)
+[debug] [2023-06-14T07:27:14.184Z] [iam] checking project cart-c58e8 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-14T07:27:14.187Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cart-c58e8:testIamPermissions [none]
+[debug] [2023-06-14T07:27:14.188Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cart-c58e8:testIamPermissions x-goog-quota-user=projects/cart-c58e8
+[debug] [2023-06-14T07:27:14.188Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cart-c58e8:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-14T07:27:17.028Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cart-c58e8:testIamPermissions 200
+[debug] [2023-06-14T07:27:17.029Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cart-c58e8:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-14T07:27:17.031Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cart-c58e8 [none]
+[debug] [2023-06-14T07:27:17.747Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cart-c58e8 200
+[debug] [2023-06-14T07:27:17.749Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cart-c58e8 {"projectId":"cart-c58e8","projectNumber":"744549786232","displayName":"cart","name":"projects/cart-c58e8","resources":{"hostingSite":"cart-c58e8"},"state":"ACTIVE","etag":"1_02a8ce93-c6c3-4868-a5cc-a8367c5c5e6c"}
+[info] 
+[info] === Deploying to 'cart-c58e8'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-06-14T07:27:17.782Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cart-c58e8/versions [none]
+[debug] [2023-06-14T07:27:17.783Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cart-c58e8/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-14T07:27:19.993Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cart-c58e8/versions 200
+[debug] [2023-06-14T07:27:19.993Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cart-c58e8/versions {"name":"projects/744549786232/sites/cart-c58e8/versions/45e86e187cf90df9","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[cart-c58e8]: beginning deploy... 
+[info] i  hosting[cart-c58e8]: found 7 files in build 
+[debug] [2023-06-14T07:27:20.034Z] [hosting] uploading with 200 concurrency
+[debug] [2023-06-14T07:27:20.038Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2023-06-14T07:27:20.748Z] [hosting] hash cache [YnVpbGQ] stored for 7 files
+[debug] [2023-06-14T07:27:20.748Z] [hosting][hash queue][FINAL] {"max":698,"min":16,"avg":123.28571428571429,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":706}
+[debug] [2023-06-14T07:27:20.749Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/744549786232/sites/cart-c58e8/versions/45e86e187cf90df9:populateFiles [none]
+[debug] [2023-06-14T07:27:20.749Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/744549786232/sites/cart-c58e8/versions/45e86e187cf90df9:populateFiles {"files":{"/asset-manifest.json":"10a099dd5cf66ef59cd77312ed20fda73f7afa8c79a4dfb459468659c53ce955","/index.html":"3920083ed48e8a4e162606db619877365d8a0c69106ba6b09f70e1375e7f9290","/static/css/main.b7f4fac9.css":"e09de3236f09229b7b0e57b375c7842ec3fc90ae6f689c54abd0fe1dd7ff311f","/static/css/main.b7f4fac9.css.map":"fc6c172bc3fb189672cbdb9b9973cd24fb10495ecf62e7d1f4f232525cec301d","/static/js/main.8ddbccac.js.LICENSE.txt":"a790f7e1feb8883b46bc84c494cd210be5e636c4541456c5d89d04e6a5dd0578","/static/js/main.8ddbccac.js":"a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c","/static/js/main.8ddbccac.js.map":"877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a"}}
+[debug] [2023-06-14T07:27:22.199Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/744549786232/sites/cart-c58e8/versions/45e86e187cf90df9:populateFiles 200
+[debug] [2023-06-14T07:27:22.199Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/744549786232/sites/cart-c58e8/versions/45e86e187cf90df9:populateFiles {"uploadRequiredHashes":["877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a","10a099dd5cf66ef59cd77312ed20fda73f7afa8c79a4dfb459468659c53ce955","3920083ed48e8a4e162606db619877365d8a0c69106ba6b09f70e1375e7f9290","e09de3236f09229b7b0e57b375c7842ec3fc90ae6f689c54abd0fe1dd7ff311f","fc6c172bc3fb189672cbdb9b9973cd24fb10495ecf62e7d1f4f232525cec301d","a790f7e1feb8883b46bc84c494cd210be5e636c4541456c5d89d04e6a5dd0578","a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files"}
+[debug] [2023-06-14T07:27:22.201Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a [none]
+[debug] [2023-06-14T07:27:22.201Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a [stream]
+[debug] [2023-06-14T07:27:22.203Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/10a099dd5cf66ef59cd77312ed20fda73f7afa8c79a4dfb459468659c53ce955 [none]
+[debug] [2023-06-14T07:27:22.203Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/10a099dd5cf66ef59cd77312ed20fda73f7afa8c79a4dfb459468659c53ce955 [stream]
+[debug] [2023-06-14T07:27:22.206Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/3920083ed48e8a4e162606db619877365d8a0c69106ba6b09f70e1375e7f9290 [none]
+[debug] [2023-06-14T07:27:22.206Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/3920083ed48e8a4e162606db619877365d8a0c69106ba6b09f70e1375e7f9290 [stream]
+[debug] [2023-06-14T07:27:22.208Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/e09de3236f09229b7b0e57b375c7842ec3fc90ae6f689c54abd0fe1dd7ff311f [none]
+[debug] [2023-06-14T07:27:22.208Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/e09de3236f09229b7b0e57b375c7842ec3fc90ae6f689c54abd0fe1dd7ff311f [stream]
+[debug] [2023-06-14T07:27:22.209Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/fc6c172bc3fb189672cbdb9b9973cd24fb10495ecf62e7d1f4f232525cec301d [none]
+[debug] [2023-06-14T07:27:22.210Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/fc6c172bc3fb189672cbdb9b9973cd24fb10495ecf62e7d1f4f232525cec301d [stream]
+[debug] [2023-06-14T07:27:22.211Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a790f7e1feb8883b46bc84c494cd210be5e636c4541456c5d89d04e6a5dd0578 [none]
+[debug] [2023-06-14T07:27:22.211Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a790f7e1feb8883b46bc84c494cd210be5e636c4541456c5d89d04e6a5dd0578 [stream]
+[debug] [2023-06-14T07:27:22.213Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [none]
+[debug] [2023-06-14T07:27:22.213Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [stream]
+[debug] [2023-06-14T07:27:22.214Z] [hosting][populate queue][FINAL] {"max":1455,"min":1455,"avg":1455,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1468}
+[debug] [2023-06-14T07:27:22.214Z] [hosting] uploads queued: 7
+[debug] [2023-06-14T07:27:26.020Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/3920083ed48e8a4e162606db619877365d8a0c69106ba6b09f70e1375e7f9290 200
+[debug] [2023-06-14T07:27:26.021Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/3920083ed48e8a4e162606db619877365d8a0c69106ba6b09f70e1375e7f9290 [stream]
+[debug] [2023-06-14T07:27:26.182Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/10a099dd5cf66ef59cd77312ed20fda73f7afa8c79a4dfb459468659c53ce955 200
+[debug] [2023-06-14T07:27:26.182Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/10a099dd5cf66ef59cd77312ed20fda73f7afa8c79a4dfb459468659c53ce955 [stream]
+[debug] [2023-06-14T07:27:27.756Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/fc6c172bc3fb189672cbdb9b9973cd24fb10495ecf62e7d1f4f232525cec301d 200
+[debug] [2023-06-14T07:27:27.756Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/fc6c172bc3fb189672cbdb9b9973cd24fb10495ecf62e7d1f4f232525cec301d [stream]
+[debug] [2023-06-14T07:27:28.255Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/e09de3236f09229b7b0e57b375c7842ec3fc90ae6f689c54abd0fe1dd7ff311f 200
+[debug] [2023-06-14T07:27:28.255Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/e09de3236f09229b7b0e57b375c7842ec3fc90ae6f689c54abd0fe1dd7ff311f [stream]
+[debug] [2023-06-14T07:27:31.873Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a790f7e1feb8883b46bc84c494cd210be5e636c4541456c5d89d04e6a5dd0578 200
+[debug] [2023-06-14T07:27:31.874Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a790f7e1feb8883b46bc84c494cd210be5e636c4541456c5d89d04e6a5dd0578 [stream]
+[debug] [2023-06-14T07:27:52.636Z] [uploadQueue] Retrying task a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c
+[debug] [2023-06-14T07:27:52.637Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [none]
+[debug] [2023-06-14T07:27:52.637Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [stream]
+[debug] [2023-06-14T07:28:23.446Z] [uploadQueue] Retrying task a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c
+[debug] [2023-06-14T07:28:23.447Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [none]
+[debug] [2023-06-14T07:28:23.447Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [stream]
+[debug] [2023-06-14T07:28:42.735Z] [uploadQueue] Retrying task 877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a
+[debug] [2023-06-14T07:28:42.736Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a [none]
+[debug] [2023-06-14T07:28:42.736Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a [stream]
+[debug] [2023-06-14T07:28:55.056Z] [uploadQueue] Retrying task a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c
+[debug] [2023-06-14T07:28:55.057Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [none]
+[debug] [2023-06-14T07:28:55.057Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [stream]
+[debug] [2023-06-14T07:29:28.265Z] [uploadQueue] Retrying task a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c
+[debug] [2023-06-14T07:29:28.266Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [none]
+[debug] [2023-06-14T07:29:28.266Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [stream]
+[debug] [2023-06-14T07:30:03.682Z] [uploadQueue] Retrying task 877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a
+[debug] [2023-06-14T07:30:03.683Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a [none]
+[debug] [2023-06-14T07:30:03.683Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a [stream]
+[debug] [2023-06-14T07:30:04.689Z] [uploadQueue] Retrying task a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c
+[debug] [2023-06-14T07:30:04.690Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [none]
+[debug] [2023-06-14T07:30:04.690Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c [stream]
+[debug] Task a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c failed: retries exhausted after 6 attempts, with error: Timeout reached making request to https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/45e86e187cf90df9/files/a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c
+[debug] [2023-06-14T07:30:34.696Z] [hosting][upload queue][FINAL] {"max":9674,"min":3821,"avg":5817.6,"active":1,"complete":6,"success":5,"errored":1,"retried":7,"total":7,"elapsed":192497}
+[debug] [2023-06-14T07:30:39.723Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-06-14T07:32:13.135Z] ----------------------------------------------------------------------
+[debug] [2023-06-14T07:32:13.139Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-14T07:32:13.139Z] CLI Version:   12.2.1
+[debug] [2023-06-14T07:32:13.140Z] Platform:      win32
+[debug] [2023-06-14T07:32:13.140Z] Node Version:  v18.15.0
+[debug] [2023-06-14T07:32:13.141Z] Time:          Wed Jun 14 2023 13:02:13 GMT+0530 (India Standard Time)
+[debug] [2023-06-14T07:32:13.142Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-14T07:32:13.302Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-14T07:32:13.304Z] > authorizing via signed-in user (rajendrasarak622@gmail.com)
+[debug] [2023-06-14T07:32:13.304Z] [iam] checking project cart-c58e8 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-14T07:32:13.309Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cart-c58e8:testIamPermissions [none]
+[debug] [2023-06-14T07:32:13.310Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cart-c58e8:testIamPermissions x-goog-quota-user=projects/cart-c58e8
+[debug] [2023-06-14T07:32:13.312Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cart-c58e8:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-14T07:32:24.582Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cart-c58e8:testIamPermissions 200
+[debug] [2023-06-14T07:32:24.582Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cart-c58e8:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-14T07:32:24.585Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cart-c58e8 [none]
+[debug] [2023-06-14T07:32:29.051Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cart-c58e8 200
+[debug] [2023-06-14T07:32:29.051Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cart-c58e8 {"projectId":"cart-c58e8","projectNumber":"744549786232","displayName":"cart","name":"projects/cart-c58e8","resources":{"hostingSite":"cart-c58e8"},"state":"ACTIVE","etag":"1_3345deb9-8e63-43d3-bc9d-c6670df4099d"}
+[info] 
+[info] === Deploying to 'cart-c58e8'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-06-14T07:32:29.066Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cart-c58e8/versions [none]
+[debug] [2023-06-14T07:32:29.066Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cart-c58e8/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-06-14T07:32:32.987Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cart-c58e8/versions 200
+[debug] [2023-06-14T07:32:32.987Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/cart-c58e8/versions {"name":"projects/744549786232/sites/cart-c58e8/versions/6537024fb9d41fd9","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[cart-c58e8]: beginning deploy... 
+[info] i  hosting[cart-c58e8]: found 7 files in build 
+[debug] [2023-06-14T07:32:33.005Z] [hosting] uploading with 200 concurrency
+[debug] [2023-06-14T07:32:33.015Z] [hosting] hash cache [YnVpbGQ] stored for 7 files
+[debug] [2023-06-14T07:32:33.016Z] [hosting][hash queue][FINAL] {"max":3,"min":1,"avg":1,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":6}
+[debug] [2023-06-14T07:32:33.016Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/744549786232/sites/cart-c58e8/versions/6537024fb9d41fd9:populateFiles [none]
+[debug] [2023-06-14T07:32:33.016Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/744549786232/sites/cart-c58e8/versions/6537024fb9d41fd9:populateFiles {"files":{"/asset-manifest.json":"10a099dd5cf66ef59cd77312ed20fda73f7afa8c79a4dfb459468659c53ce955","/index.html":"3920083ed48e8a4e162606db619877365d8a0c69106ba6b09f70e1375e7f9290","/static/css/main.b7f4fac9.css":"e09de3236f09229b7b0e57b375c7842ec3fc90ae6f689c54abd0fe1dd7ff311f","/static/css/main.b7f4fac9.css.map":"fc6c172bc3fb189672cbdb9b9973cd24fb10495ecf62e7d1f4f232525cec301d","/static/js/main.8ddbccac.js":"a02d4fe948515c3d4fd343f4a6e1cadd281786d64fc05eaac4435d44d148e29c","/static/js/main.8ddbccac.js.LICENSE.txt":"a790f7e1feb8883b46bc84c494cd210be5e636c4541456c5d89d04e6a5dd0578","/static/js/main.8ddbccac.js.map":"877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a"}}
+[debug] [2023-06-14T07:32:34.386Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/744549786232/sites/cart-c58e8/versions/6537024fb9d41fd9:populateFiles 200
+[debug] [2023-06-14T07:32:34.386Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/744549786232/sites/cart-c58e8/versions/6537024fb9d41fd9:populateFiles {"uploadRequiredHashes":["877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/6537024fb9d41fd9/files"}
+[debug] [2023-06-14T07:32:34.388Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/6537024fb9d41fd9/files/877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a [none]
+[debug] [2023-06-14T07:32:34.388Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/cart-c58e8/versions/6537024fb9d41fd9/files/877f70742f11340707ecdb55317717c835188d57b7c29a6b6c31108188b20c1a [stream]
+[debug] [2023-06-14T07:32:34.390Z] [hosting][populate queue][FINAL] {"max":1374,"min":1374,"avg":1374,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1377}
+[debug] [2023-06-14T07:32:34.390Z] [hosting] uploads queued: 1
